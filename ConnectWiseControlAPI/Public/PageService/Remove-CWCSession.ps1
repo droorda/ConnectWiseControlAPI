@@ -1,35 +1,16 @@
 function Remove-CWCSession
 {
-  [CmdletBinding(SupportsShouldProcess)]
-  param (
-    [Parameter(Mandatory = $True)]
-    [guid[]]$GUID,
-    [Parameter(Mandatory = $True)]
-    [string]$Group
-  )
-
-  $Endpoint = 'Services/PageService.ashx/AddSessionEvents'
-
-  $SessionEventType = 21
-  $Body = ConvertTo-Json @(
-    @(
-      $Group
-    ),
-    @(
-      @{
-        SessionID = $GUID
-        EventType = $SessionEventType
-      }
+    [CmdletBinding(SupportsShouldProcess)]
+    param (
+        [Parameter(Mandatory = $True)]
+        [guid[]]$GUID,
+        [Parameter(Mandatory = $True)]
+        [string]$Group
     )
-  )
 
-  $WebRequestArguments = @{
-    Endpoint = $Endpoint
-    Body     = $Body
-    Method   = 'Post'
-  }
-  if ($PSCmdlet.ShouldProcess($WebRequestArguments.Body, 'Remove-CWCSession'))
-  {
-    Invoke-CWCWebRequest -Arguments $WebRequestArguments
-  }
+
+    if ($PSCmdlet.ShouldProcess($WebRequestArguments.Body, 'Remove-CWCSession'))
+    {
+        Invoke-AddSessionEvents -GUID $GUID -Group $Group -SessionEventType 21
+    }
 }
