@@ -38,7 +38,7 @@
             if ($Quiet) { return $True }
             else { return Get-Date }
         }
-        else {
+        elseif ($LatestEvent) {
             # Time conversion hell :(
             $TimeDiff = $epoch - ($LatestEvent.Time / 1000)
             $OfflineTime = $origin.AddSeconds($TimeDiff)
@@ -46,6 +46,10 @@
             if ($Quiet -and $Difference.TotalSeconds -lt $Seconds) { return $True }
             elseif ($Quiet) { return $False }
             else { return $OfflineTime }
+        } else {
+            # No connection events
+            if ($Quiet) { return $False }
+            else { return $origin }
         }
     }
     else { return Write-Error 'Unable to determine last contact.' }
