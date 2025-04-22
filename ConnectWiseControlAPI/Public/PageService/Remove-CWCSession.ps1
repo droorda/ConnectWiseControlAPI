@@ -11,7 +11,6 @@ function Remove-CWCSession
   $Endpoint = 'Services/PageService.ashx/AddSessionEvents'
 
   $SessionEventType = 21
-  $Body = ConvertTo-Json @(
 
   $GuidList = @()
   foreach ($SessionID in $GUID)
