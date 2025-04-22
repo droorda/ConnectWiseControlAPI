@@ -9,7 +9,7 @@ function Remove-CWCSession
     )
 
 
-    if ($PSCmdlet.ShouldProcess($WebRequestArguments.Body, 'Remove-CWCSession'))
+    if ($PSCmdlet.ShouldProcess($GUID, 'Remove-CWCSession'))
     {
         Invoke-AddSessionEvents -GUID $GUID -Group $Group -SessionEventType 21
     }
