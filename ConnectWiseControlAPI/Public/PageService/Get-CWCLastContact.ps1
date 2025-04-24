@@ -46,7 +46,15 @@
             if ($Quiet -and $Difference.TotalSeconds -lt $Seconds) { return $True }
             elseif ($Quiet) { return $False }
             else { return $OfflineTime }
-        } else {
+        }
+        elseif ($SessionDetails.Session.GuestInfoUpdateTime -gt 0) {
+            # No connection events, but the session is still active
+            $OfflineTime = (get-date).AddSeconds(-($SessionDetails.Session.GuestInfoUpdateTime))
+            if ($Quiet -and $SessionDetails.Session.GuestInfoUpdateTime -lt $Seconds) { return $True }
+            elseif ($Quiet) { return $False }
+            else { return $OfflineTime }
+        }
+        else {
             # No connection events
             if ($Quiet) { return $False }
             else { return $origin }
