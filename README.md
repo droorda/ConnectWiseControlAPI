@@ -14,19 +14,19 @@ This is a PowerShell wrapper for ConnectWise Control
 
 <div align="center">
 
-[![Build status](https://ci.appveyor.com/api/projects/status/gkmh0h0234s1x7rt?svg=true)](https://ci.appveyor.com/project/christaylorcodes/ConnectWiseControlAPI)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8aa3633cda3d41d5baa5e9f595b8124f)](https://www.codacy.com/gh/christaylorcodes/ConnectWiseControlAPI/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=christaylorcodes/ConnectWiseControlAPI&amp;utm_campaign=Badge_Grade)
-[![Gallery](https://img.shields.io/powershellgallery/v/ConnectWiseControlAPI?label=PS%20Gallery&logo=powershell&logoColor=white)](https://www.powershellgallery.com/packages/ConnectWiseControlAPI)
-[![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat)](https://github.com/christaylorcodes/GitHub-Template/blob/main/DONATE.md)
+[![Build status](https://ci.appveyor.com/api/projects/status/1goqi5aldbm6p2oe?svg=true)](https://ci.appveyor.com/project/droorda/connectwisecontrolapi)
+<!-- [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8aa3633cda3d41d5baa5e9f595b8124f)](https://www.codacy.com/gh/christaylorcodes/ConnectWiseControlAPI/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=christaylorcodes/ConnectWiseControlAPI&amp;utm_campaign=Badge_Grade) -->
+<!-- [![Gallery](https://img.shields.io/powershellgallery/v/ConnectWiseControlAPI?label=PS%20Gallery&logo=powershell&logoColor=white)](https://www.powershellgallery.com/packages/ConnectWiseControlAPI) -->
+<!-- [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat)](https://github.com/christaylorcodes/GitHub-Template/blob/main/DONATE.md) -->
 
 </div>
 <p align="center">
     <a href="ConnectWiseControlAPI_Functions.md">List of Functions</a> •
     <a href="./Examples">Examples</a> •
     <a href="#install">Install</a> •
-    <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md">Contribute</a> •
-    <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md#reporting-bugs">Submit a Bug</a> •
-    <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md#suggesting-enhancements">Request a Feature</a>
+    <!-- <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md">Contribute</a> • -->
+    <!-- <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md#reporting-bugs">Submit a Bug</a> • -->
+    <!-- <a href="https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md#suggesting-enhancements">Request a Feature</a> -->
 </p>
 
 <!-- Summary -->
@@ -35,15 +35,15 @@ This module makes it easy to leverage PowerShell to automate tasks in Control.
 
 <!-- Summary -->
 
-## [Install](https://www.powershellgallery.com/packages/ConnectWiseControlAPI)
+<!-- ## [Install](https://www.powershellgallery.com/packages/ConnectWiseControlAPI) -->
 
- The module can be easily installed from the [PowerShellGallery](https://www.powershellgallery.com/packages/ConnectWiseControlAPI)
+ <!-- The module can be easily installed from the [PowerShellGallery](https://www.powershellgallery.com/packages/ConnectWiseControlAPI) -->
 
-```powershell
+<!-- ```powershell
 Install-Module 'ConnectWiseControlAPI'
-```
+``` -->
 
->If you are having issues accessing the PowerShell Gallery check out my [repair script](https://github.com/christaylorcodes/Initialize-PSGallery)
+<!-- >If you are having issues accessing the PowerShell Gallery check out my [repair script](https://github.com/christaylorcodes/Initialize-PSGallery) -->
 
 
 ## Requirements
@@ -52,13 +52,13 @@ Install-Module 'ConnectWiseControlAPI'
 
 * Requires your Control server to use https.
 
-## [Contributing](https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md)
+<!-- ## [Contributing](https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md) -->
 
-If you use this project please give it a star and follow so you can get updated when new features are released. This also lets me know what projects are getting used and what ones I should dedicate more time to. If you want to get more involved please see the [contributing page](https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md). Projects need all kinds of help even if you don't know how to code.
+<!-- If you use this project please give it a star and follow so you can get updated when new features are released. This also lets me know what projects are getting used and what ones I should dedicate more time to. If you want to get more involved please see the [contributing page](https://github.com/christaylorcodes/GitHub-Template/blob/main/CONTRIBUTING.md). Projects need all kinds of help even if you don't know how to code. -->
 
 Want to share something you created using the module? Submit it to be featured as a Community Package.
 
-## [Donating](https://github.com/christaylorcodes/GitHub-Template/blob/main/DONATE.md)
+<!-- ## [Donating](https://github.com/christaylorcodes/GitHub-Template/blob/main/DONATE.md) -->
 
 If you cant take time to contribute maybe you would like to help another way.
 

@@ -1,4 +1,4 @@
-function Remove-CWCSession
+function Update-CWCClient
 {
     [CmdletBinding(SupportsShouldProcess)]
     param (
@@ -11,6 +11,6 @@ function Remove-CWCSession
 
     if ($PSCmdlet.ShouldProcess($GUID, 'Remove-CWCSession'))
     {
-        Invoke-AddSessionEvents -GUID $GUID -Group $Group -SessionEventType 21
+        Invoke-AddSessionEvents -GUID $GUID -Group $Group -SessionEventType 40
     }
 }
