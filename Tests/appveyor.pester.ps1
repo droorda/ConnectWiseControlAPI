@@ -30,6 +30,7 @@ if($Test){
     $config = New-PesterConfiguration
     $config.Run.Path =  "$ProjectRoot\Tests"
     $config.Run.PassThru = $true
+    $config.TestResult.Enabled = $true
     $config.TestResult.OutputPath = "$ProjectRoot\$TestFile"
 
     Invoke-Pester @Verbose -Configuration $config |
