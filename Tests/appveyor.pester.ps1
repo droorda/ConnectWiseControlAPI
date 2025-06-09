@@ -27,7 +27,12 @@ if($Test){
 
     Import-Module Pester -force
 
-    Invoke-Pester @Verbose -Path "$ProjectRoot\Tests" -OutputFormat NUnitXml -OutputFile "$ProjectRoot\$TestFile" -PassThru |
+    $config = New-PesterConfiguration
+    $config.Run.Path =  "$ProjectRoot\Tests"
+    $config.Run.PassThru = $true
+    $config.TestResult.OutputPath = "$ProjectRoot\$TestFile"
+
+    Invoke-Pester @Verbose -Configuration $config |
         Export-Clixml -Path "$ProjectRoot\PesterResults_PS$PSVersion`_$Timestamp.xml"
 
     If($env:APPVEYOR_JOB_ID){
