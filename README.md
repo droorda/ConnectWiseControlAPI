@@ -65,3 +65,5 @@ If you cant take time to contribute maybe you would like to help another way.
 It takes time to maintain this project. Does the time spent on this module help you do cool things? Is that time worth a beer or two?
 
 Donations allow me to spend more time on this project and implement your feature requests.
+
+Bug Fixes by Douglas Roorda
