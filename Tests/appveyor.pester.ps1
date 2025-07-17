@@ -18,6 +18,7 @@ Set-Location $ProjectRoot
 
 $Verbose = @{}
 if($env:APPVEYOR_REPO_BRANCH -and $env:APPVEYOR_REPO_BRANCH -notlike "master"){
+    "`n`tSTATUS: Enabling Verbose`n"
     $Verbose.add("Verbose",$True)
 }
 
@@ -29,9 +30,12 @@ if($Test){
 
     Invoke-Pester @Verbose -Path "$ProjectRoot\Tests" -OutputFormat NUnitXml -OutputFile "$ProjectRoot\$TestFile" -PassThru |
         Export-Clixml -Path "$ProjectRoot\PesterResults_PS$PSVersion`_$Timestamp.xml"
+    # Invoke-Pester @Verbose -Path "$ProjectRoot\Tests" -OutputFormat NUnitXml -OutputFile "$ProjectRoot\$TestFile" -PassThru |
+    #     Export-Clixml -Path "$ProjectRoot\PesterResults_PS$PSVersion`_$Timestamp.xml"
 
     If($env:APPVEYOR_JOB_ID){
-        (New-Object 'System.Net.WebClient').UploadFile( $Address, "$ProjectRoot\$TestFile" )
+        "Uploading '$ProjectRoot\$TestFile' to $Address"
+        # (New-Object 'System.Net.WebClient').UploadFile( $Address, "$ProjectRoot\$TestFile" )
     }
 }
 
